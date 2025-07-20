@@ -2,7 +2,7 @@ import RPi.GPIO as gpio
 import time
 continuar = 'S'
 GPIO.setmode(GPIO.BOARD)
-GPIO.setup(11.GPIO.OUT)
+GPIO.setup(11,GPIO.OUT)
 while continuar = 'S'
 	piscadas = int(input('Quantas piscadas vc deseja? :'))
 	for i range(0,piscadas)
