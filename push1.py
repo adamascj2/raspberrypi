@@ -8,13 +8,14 @@ GPIO.setup(pinoLED,GPIO.OUT)
 circuitoAberto=1 
 try: 
 	while True: 
-        circuitoAberto = GPIO.input(pinoBotao)  # Verifica se circuito aberto ou nao      	
-         	if circuitoAberto==1:
+        	circuitoAberto = GPIO.input(pinoBotao)  # Verifica se circuito aberto ou nao      	
+         	print(circuitoAberto)
+		if circuitoAberto==1:
               		GPIO.output(pinoLED,0)  
-              		time.sleep(.5)
-         	if circuitoAberto==0:        # Botao apertado!
+                if circuitoAberto==0:        # Botao apertado!
               		GPIO.output(pinoLED,1)  
-              		time.sleep(.5)
+           	time.sleep(.5)
 
 except KeyboardInterrupt:    # Ctrl c para interromper
 	GPIO.cleanup()
+        print('Tudo limpo')
