@@ -1,9 +1,11 @@
 import time    
 import RPi.GPIO as GPIO    
 GPIO.setmode(GPIO.BOARD)   
-GPIO.setup(pinoLED,GPIO.OUT)
-oPWM = GPIO.PWM(pinoLED,1000)   #Como se ligasse em forma de pulso com frequencia acima de 60 hertz/seg
 pinoLED=11
+
+GPIO.setup(pinoLED,GPIO.OUT)
+
+oPWM = GPIO.PWM(pinoLED,1000)   #Como se ligasse em forma de pulso com frequencia acima de 60 hertz/seg
 DC=0
 oPWM.start(DC)
 
