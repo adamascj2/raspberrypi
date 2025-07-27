@@ -10,12 +10,12 @@ estadoAnterior=1
 estadoLED=0
 try: 
 	while True: 
-        	estado = GPIO.input(pinoBotao)  # Verifica se estado é 1 ou 0    	
+		estado = GPIO.input(pinoBotao)  # Verifica se estado é 1 ou 0    	
          	print(estado)
-		if estado==1 and estadoAnterior==0:
+		if estado==1 and estadoAnterior==0
 			estadoLED=not estadoLED  #Inverte o estadoLED
               		GPIO.output(pinoLED,estadoLED)
-			estadoAnterior=estado  
+		estadoAnterior=estado  
              	time.sleep(.5)
 
 except KeyboardInterrupt:    # Ctrl c para interromper
