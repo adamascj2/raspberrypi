@@ -1,5 +1,6 @@
 import tkinter as tk
 import RPi.GPIO as GPIO
+import time
 GPIO.setmode(GPIO.BOARD)
 pinoLED=11                   
 GPIO.setup(pinoLED,GPIO.OUT) 
@@ -47,3 +48,4 @@ except KeyboardInterrupt:    # Ctrl c para interromper
 	GPIO.cleanup()
 
         print('Tudo limpo')
+
