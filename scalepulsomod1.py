@@ -22,7 +22,7 @@ try:
 	label_instrucao.pack(pady=15)
  	escala_dc = tk.Scale(
     		app,
-    		from_=-100,
+    		from_=0,
     		to=100,
     		orient=tk.HORIZONTAL,
     		length=300,
@@ -45,4 +45,5 @@ try:
 													
 except KeyboardInterrupt:    # Ctrl c para interromper
 	GPIO.cleanup()
+
         print('Tudo limpo')
