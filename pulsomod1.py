@@ -14,7 +14,7 @@ try:
 		for DC in range (0,99,5):
 			oPWM.ChangeDutyCycle(DC)	
 			time.sleep(.5)
-		for DC in range (0,99,-5):
+		for DC in range (99,0,-5):
 			oPWM.ChangeDutyCycle(DC)	
 			time.sleep(.5)
 
@@ -22,4 +22,5 @@ try:
 except KeyboardInterrupt:    # Ctrl c para interromper
         oPWM.stop()
 	GPIO.cleanup()
+
         print('Tudo limpo')
