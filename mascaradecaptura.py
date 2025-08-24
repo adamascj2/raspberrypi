@@ -46,10 +46,7 @@ try:
         if cv2.waitKey(1) == ord('q'):
             break
 
-except Exception as e:
-    print(f"Ocorreu um erro: {e}")
-
-finally:
+except KeyboardInterrupt:    # Ctrl c para interromper
     picam2.stop()
     cv2.destroyAllWindows()
     print("Programa encerrado.")
